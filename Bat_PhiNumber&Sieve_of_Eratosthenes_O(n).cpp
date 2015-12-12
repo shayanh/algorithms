@@ -20,6 +20,13 @@ void sieve_new(int n){
 
 void find_phi(int n) {
 	phi[1] = 1;
-	for(int i = 2;i <= n;++i)
-		phi[i] = (lp[i] - 1) * phi[(i / lp[i])];
+	for(int i = 2;i < n;++i) {
+		if(lp[i] == i)
+			phi[i] = i - 1;
+		else {
+			phi[i] = phi[lp[i]] * phi[(i / lp[i])];
+			if(lp[i / lp[i]] == lp[i])
+				phi[i] *= lp[i], phi[i] /= (lp[i] - 1)
+		}
+	}
 }
