@@ -1,14 +1,4 @@
-#include <algorithm>
-#include <iostream>
-#include <vector>
-using namespace std;
-typedef long long ll;
-#define Size(x) (int)(x).size()
-
-const ll INF = 1000ll * 1000 * 1000 * 1000 * 100 + 3;
-const int N = 1000 * 100 + 5;
-ll D[N];
-int I[N], n;
+//Solution to problem 191e
 // template <class T1>
 
 class segment{
@@ -65,36 +55,3 @@ public:
 		return tmp;
 	}
 } T;
-
-ll check(ll x) {
-	ll ans = 0;
-	for(int i = 1;i <= n;++i) {
-		int k = upper_bound(T.S[1].begin(), T.S[1].end(), D[i] - x) - T.S[1].begin() - 1;
-		if(k == -1)
-			continue;
-		ans += T.find(1, 0, i - 1, 0, k);
-	}
-	return ans;
-}
-
-int main() {
-	ios::sync_with_stdio(false);
-	ll k;
-	cin >> n >> k;
-	for(int i = 1;i <= n;++i) {
-		cin >> I[i];
-		D[i] = I[i] + D[i - 1];
-	}
-	T.build(1, 0, n, D);
-	
-	ll s = -INF, e = INF;
-	while(s < e) {
-		ll m = (s + e + 1) >> 1;
-		if(check(m) < k)
-			e = m - 1;
-		else
-			s = m;
-	}
-	cout << s << endl;
-	return 0;
-}
