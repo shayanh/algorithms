@@ -15,6 +15,7 @@ void kmp() {
 	for (int i = 0; i < SZ(s); i++)	{
 		while(pos != -1 && (pos == SZ(t) || s[i] != t[pos])) pos = f[pos];
 		pos ++;
-		if (pos == SZ(t)) match[i - pos + 1] = 1;
+		if (pos == SZ(t)) match[i] = 1;
+		else match[i] = 0;
 	}
 }
