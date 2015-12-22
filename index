@@ -9,6 +9,7 @@ Graph:
 	Flow
 	Cut Vertex
 	Cut Edge
+	Bellman Ford
 	Dijkstra
 	Prim
 	DSU
