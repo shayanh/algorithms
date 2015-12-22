@@ -2,3 +2,4 @@
 !*.cpp
 !README.md
 !.gitignore
+!_vimrc
