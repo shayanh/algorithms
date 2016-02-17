@@ -1,6 +1,6 @@
 NeshesTeam template codes for ACM ICPC contests
 
-Base:
+# Base:
 	_vimrc
 	Template
 
