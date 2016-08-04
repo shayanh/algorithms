@@ -32,6 +32,9 @@ inline void shift(int x) {
 	add[x] = 0;
 }
 
+// lo, hi -> [)
+// s = 0, e = n, x = 1
+
 void update2(int lo, int hi, int s, int e, int x, int delta) {
 	if (lo == s && hi == e) {
 		min_val[x] += delta;

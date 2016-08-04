@@ -19,7 +19,11 @@ typedef pair<int, int> pii;
 
 const int MAXN = 100 * 1000 + 10;
 
+
 int v1[4 * MAXN];
+
+// lo, hi -> [)
+// s = 0, e = n, x = 1
 
 void update1(int lo, int hi, int s, int e, int x, int val) {
 	if (lo == s && hi == e) {

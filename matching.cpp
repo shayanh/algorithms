@@ -19,10 +19,13 @@ typedef pair<int, int> pii;
 
 const int MAXN = 50 * 1000 + 10;
 
-int match[3][MAXN];
+int match[3][MAXN]; // 0 for first part, 1 for second part
 bool mark[MAXN];
-vector<int> adj[MAXN];
+vector<int> adj[MAXN]; // adjacent list for first part nodes
 int n, m, p;
+// n: number of nodes in first part
+// m: number of nodes in second part
+// p: number of edges
 
 bool dfs(int x) {
 	if (mark[x]) return false;
@@ -57,6 +60,9 @@ int main () {
 	cin >> n >> m >> p;
 	for (int i = 0; i < p; i ++) {
 		int x, y; cin >> x >> y; x --, y --;
+		// x: a node in first part  [0, n)
+		// y: a node in second part [0, m)
+
 		adj[x].pb(y);
 	}
 
