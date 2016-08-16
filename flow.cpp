@@ -1,5 +1,6 @@
 const int N = 100;
-int viz[N], mat[N][N], network[N][N], parent[N];
+int mat[N][N]; // input graph
+int viz[N], network[N][N], parent[N];
 bool anotherPath(int start, int end) {
 	memset(viz, 0, sizeof viz);
 	memset(parent, -1, sizeof parent);
