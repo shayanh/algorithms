@@ -1,5 +1,9 @@
+#include <queue>
+#include <cstring>
+
 const int N = 100;
-int mat[N][N]; // input graph
+int mat[N][N];
+
 int viz[N], network[N][N], parent[N];
 bool anotherPath(int start, int end) {
 	memset(viz, 0, sizeof viz);
