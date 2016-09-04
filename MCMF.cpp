@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <queue>
 
 using namespace std;
@@ -30,7 +31,16 @@ public:
     pair <F, C> search(int s, int t);
 
     pair <F, C> mincostflow(int s, int t);
+
+    vector <pair <int, int> > flow_edges(void);
 };
+
+vector <pair <int, int> > MinCostFlow::flow_edges(void) {
+    int x, e;
+    vector <pair <int, int> > ans;
+    REP(x,V) for(e=last[x];e>=0;e=prv[e]) if(flow[e] > 0) ans.push_back(make_pair(x,to[e]));
+    return ans;
+}
 
 MinCostFlow::MinCostFlow(int n){
     V = n; E = 0;
@@ -68,7 +78,7 @@ pair <F, C> MinCostFlow::search(int s, int t){
     if(used[t]){
         ansf = F_INF;
         for(int e=path[t];e>=0;e=path[to[e^1]]) ansf = min(ansf,cap[e]);
-        for(int e=path[t];e>=0;e=path[to[e^1]]) {ansc += cost[e] * ansf; cap[e] -= ansf; cap[e^1] += ansf;}
+        for(int e=path[t];e>=0;e=path[to[e^1]]) {ansc += cost[e] * ansf; cap[e] -= ansf; flow[e] += ansf; cap[e^1] += ansf; flow[e^1] -= ansf;}
     }
 
     return make_pair(ansf,ansc);
