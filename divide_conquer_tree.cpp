@@ -16,7 +16,7 @@ void set_size(int v, int p) {
 		}
 }
 
-void divide(int v, char c) {
+void divide(int v) {
 	set_size(v, v);
 	int S = _sz[v], p = v;
     sign:
@@ -33,5 +33,21 @@ void divide(int v, char c) {
 	is_av[v] = 0;
 	for(int u:adj[v])
 		if(is_av[u])
-			divide(u, c + 1);
+			divide(u);
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	int n;
+	cin >> n;
+	for(int i = 1;i < n;++i) {
+		int a, b;
+		cin >> a >> b;
+		—-a, —-b;
+		adj[a].push_back(b);
+		adj[b].push_back(a);
+	}
+	fill(is_av, is_av + N, 1);
+	divide(0);
+	return 0;
 }
