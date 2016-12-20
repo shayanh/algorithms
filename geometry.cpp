@@ -26,6 +26,13 @@ ostream &operator<<(ostream &os, const PT &p) {
     return os << "(" << p.x << "," << p.y << ")";
 }
 
+// if movement from a to b to c is done in a CW path returns 1
+// else if it's CCW returns -1 and if they make a line returns 0
+int IsCWTurn(PT a, PT b, PT c) {
+    double r = cross((b - c), (a - c));
+    return (fabs(r) < EPS)? 0: (r > 0)? 1: -1;
+}
+
 // rotate a point CCW or CW around the origin
 PT RotateCCW90(PT p)   { return PT(-p.y,p.x); }
 PT RotateCW90(PT p)    { return PT(p.y,-p.x); }
@@ -44,9 +51,7 @@ PT ProjectPointSegment(PT a, PT b, PT c) {
     double r = dot(b-a,b-a);
     if (fabs(r) < EPS) return a;
     r = dot(c-a, b-a)/r;
-    if (r < 0) return a;
-    if (r > 1) return b;
-    return a + (b-a)*r;
+    return (r < 0)? a: (r > 1)? b: a + (b - a)*r;
 }
 
 // compute distance from c to segment between a and b
@@ -78,7 +83,7 @@ bool SegmentsIntersect(PT a, PT b, PT c, PT d) {
         if (dist2(a, c) < EPS || dist2(a, d) < EPS ||
         dist2(b, c) < EPS || dist2(b, d) < EPS) return true;
         if (dot(c-a, c-b) > 0 && dot(d-a, d-b) > 0 && dot(c-b, d-b) > 0)
-        return false;
+            return false;
         return true;
     }
     if (cross(d-a, b-a) * cross(c-a, b-a) > 0) return false;
