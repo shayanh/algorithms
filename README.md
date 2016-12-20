@@ -1,21 +1,23 @@
 NeshesTeam template codes for ACM ICPC contests
 
 ### Base:
-*	_vimrc
+*	vimrc
 *	Template
 
 ### Graph:
 *	LCA
 *	SCC
 *	Matching
-*	Flow
+*	Max Flow
+*   Min Cost Max Flow
 *	Cut Vertex
 *	Cut Edge
 *	Bellman Ford
 *	Dijkstra
 *	Prim
 *	DSU
-	
+*   Eulerian Tour
+
 ### Geometry:
 *	Intersection
 *	Convex Hull
@@ -23,8 +25,10 @@ NeshesTeam template codes for ACM ICPC contests
 ### Data Sctructure:
 *	Fenwick1
 *	Fenwick2
-*	Segment Vector Optimized
+*   Segment Tree
+*   Segment Tree Lazy Propagation
 *	RMQ
+*   Trie
 
 ### String:
 *	Hash
@@ -34,12 +38,15 @@ NeshesTeam template codes for ACM ICPC contests
 ### Number Theory:
 *	Phi
 *	370 SGU
+*   Euclid
+*   C(n,r)
 
 ### Other:
 *	Read Input
 *	LIS
-*	DFS Non-returning
 *	Divide and Conquer Tree
+*   Matrix Fast Expo
+*	DFS Non-returning
 *	Divide and Conquer Optimization
 *	Knuth Optimization
 *	Lower Envelope DP Optimization
