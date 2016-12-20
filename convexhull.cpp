@@ -13,9 +13,6 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
-// BEGIN CUT
-#include <map>
-// END CUT
 
 using namespace std;
 
