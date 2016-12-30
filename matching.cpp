@@ -1,24 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define pb push_back
-#define mp make_pair
-#define SQR(a) ((a) * (a))
-#define SZ(x) ((int) (x).size())
-#define ALL(x) (x).begin(), (x).end()
-#define CLR(x, a) memset(x, a, sizeof x)
-#define VAL(x) #x << " = " << (x) << "   "
-#define FOREACH(i, x) for(__typeof((x).begin()) i = (x).begin(); i != (x).end(); i ++)
-#define FOR(i, n) for (int i = 0; i < (n); i ++)
-#define X first
-#define Y second
-
-typedef long long ll;
-typedef pair<ll, ll> pll;
-typedef pair<int, int> pii;
-
-const int MAXN = 50 * 1000 + 10;
-
 int match[3][MAXN]; // 0 for first part, 1 for second part
 bool mark[MAXN];
 vector<int> adj[MAXN]; // adjacent list for first part nodes
@@ -55,8 +34,6 @@ void bi_match() {
 }
 
 int main () {
-	ios::sync_with_stdio(false);
-	
 	cin >> n >> m >> p;
 	for (int i = 0; i < p; i ++) {
 		int x, y; cin >> x >> y; x --, y --;

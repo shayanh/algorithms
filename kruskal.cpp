@@ -1,5 +1,3 @@
-const int MAXN = 600, MAXM = 50 * 1000 + 10, INF = 1e9;
-
 int par[MAXN];
 pair <int, pii> e[MAXN];
 
@@ -14,29 +12,4 @@ bool merge(int x, int y) {
 	return x != y;
 }
 
-pair<int, pii> e[MAXM];
-
-int main () {
-	ios::sync_with_stdio(false);
-
-	int n, m; cin >> n >> m;
-	for (int i = 0; i < m; i ++) {
-		int x, y, w; cin >> x >> y >> w; x--, y--;
-		e[i] = mp(w, mp(x, y));
-	}
-
-	fill(par, par + n, -1);
-	sort(e, e + m);
-
-	int ans = 0;
-	for (int i = 0; i < m; i ++) {
-		int x = father(e[i].Y.X), y = father(e[i].Y.Y), w = e[i].X;
-		
-		if(merge(x, y))
-			ans += w;
-	}
-
-	cout << ans << endl;
-	return 0;
-}
-
+fill(par, par + n, -1);
