@@ -1,0 +1,134 @@
+\documentclass[a4paper,landscape]{article}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+\usepackage[utf8]{inputenc}
+%\usepackage{pdflscape}
+\usepackage[top=0.5cm, bottom=0.5cm, right=0.5cm, left=0.5cm]{geometry}
+
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+ 
+\usepackage{listings}
+
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0} 
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\fontfamily{zi4}\selectfont,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+ 
+\begin{document}
+\tableofcontents
+\pagebreak
+\begin{multicols}{2}
+
+\section{Base}
+\subsection{vimrc}
+	\lstinputlisting[language=C++]{vimrc}
+\subsection{Template}
+	\lstinputlisting[language=C++]{template.cpp}
+
+\section{Graph}
+\subsection{LCA}
+	\lstinputlisting[language=C++]{lca.cpp}
+\subsection{SCC}
+	\lstinputlisting[language=C++]{scc-gabow.cpp}
+\subsection{Matching}
+	\lstinputlisting[language=C++]{matching.cpp}
+\subsection{Max Flow BFS}
+	\lstinputlisting[language=C++]{flow-bfs.cpp}
+\subsection{Max Flow Dinic}
+	\lstinputlisting[language=C++]{flow-dinic.cpp}
+\subsection{Min Cost Max Flow}
+	\lstinputlisting[language=C++]{min-cost-max-flow.cpp}
+\subsection{Cut Vertex}
+	\lstinputlisting[language=C++]{cutvertex.cpp}
+\subsection{Cut Edge}
+	\lstinputlisting[language=C++]{cutedge.cpp}
+\subsection{Bellman Ford}
+	\lstinputlisting[language=C++]{bellmanford.cpp}
+\subsection{Dijkstra}
+	\lstinputlisting[language=C++]{dijkstra.cpp}
+\subsection{Prim}
+	\lstinputlisting[language=C++]{prim.cpp}
+\subsection{DSU}
+	\lstinputlisting[language=C++]{kruskal.cpp}
+\subsection{Eulerian Tour}
+	\lstinputlisting[language=C++]{eulerian-tour.cpp}
+
+\section{Geometry}
+\subsection{Geometry}
+	\lstinputlisting[language=C++]{geometry.cpp}
+\subsection{Convex Hull}
+    \lstinputlisting[language=C++]{convexhull.cpp}
+
+\section{Data Structures}
+\subsection{Fenwick1}
+	\lstinputlisting[language=C++]{fenwick1.cpp}
+\subsection{Fenwick2}
+	\lstinputlisting[language=C++]{fenwick2.cpp}
+\subsection{Segment Tree}
+	\lstinputlisting[language=C++]{segment.cpp}
+\subsection{Segment Tree Lazy Propagation}
+	\lstinputlisting[language=C++]{segment-lazy.cpp}
+\subsection{RMQ}
+	\lstinputlisting[language=C++]{rmq.cpp}
+\subsection{Trie}
+	\lstinputlisting[language=C++]{trie.cpp}
+
+\section{String}
+\subsection{Hash}
+	\lstinputlisting[language=C++]{hash.cpp}
+\subsection{KMP}
+	\lstinputlisting[language=C++]{kmp.cpp}
+\subsection{Suffix Array}
+	\lstinputlisting[language=C++]{suffix-array.cpp}
+
+\section{Number Theory}
+\subsection{Phi}
+	\lstinputlisting[language=C++]{phi.cpp}
+\subsection{370 SGU}
+	\lstinputlisting[language=C++]{370.cpp}
+\subsection{Euclid}
+	\lstinputlisting[language=C++]{euclid.cpp}
+\subsection{C(n, r)}
+	\lstinputlisting[language=C++]{comb.cpp}
+
+\section{Other}
+\subsection{Read Input}
+	\lstinputlisting[language=C++]{readinput.cpp}
+\subsection{LIS}
+	\lstinputlisting[language=C++]{lis.cpp}
+\subsection{Divide and Conquer Tree}
+	\lstinputlisting[language=C++]{divide-conquer-tree.cpp}
+
+\end{multicols}
+\end{document}
