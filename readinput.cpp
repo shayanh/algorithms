@@ -1,14 +1,3 @@
-#include <iostream>
-#include <cstring>
-#include <cstdio>
-using namespace std;
-
-#define CLR(x, a) memset(x, a, sizeof x)
-#define FOREACH(i, x) for(__typeof((x).begin()) i = (x).begin(); i != (x).end(); i ++)
-#define FOR(i, n) for (int i = 0; i < (n); i ++)
-
-const int MAXN = 5 * 100 + 10;
-
 inline int read() {
 	bool minus = false;
 	int result = 0;
@@ -30,8 +19,3 @@ inline int read() {
 	else
 		return result;
 }
-
-int main () {
-	return 0;
-}
-

@@ -8,7 +8,8 @@ NeshesTeam template codes for ACM ICPC contests
 *	LCA
 *	SCC
 *	Matching
-*	Max Flow
+*	Max Flow BFS
+*   Max Flow Dinic
 *   Min Cost Max Flow
 *	Cut Vertex
 *	Cut Edge
@@ -19,7 +20,7 @@ NeshesTeam template codes for ACM ICPC contests
 *   Eulerian Tour
 
 ### Geometry:
-*	Intersection
+*	Geometry
 *	Convex Hull
 
 ### Data Sctructure:
@@ -45,8 +46,3 @@ NeshesTeam template codes for ACM ICPC contests
 *	Read Input
 *	LIS
 *	Divide and Conquer Tree
-*   Matrix Fast Expo
-*	DFS Non-returning
-*	Divide and Conquer Optimization
-*	Knuth Optimization
-*	Lower Envelope DP Optimization

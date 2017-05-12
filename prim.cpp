@@ -1,20 +1,8 @@
-#include <iostream>
-#include <vector>
-#include <utility>
-#include <set>
-using namespace std;
-typedef long long ll;
-typedef pair <int,int> pii;
-#define mp(x,y) make_pair(x,y)
-#define Size(x) (int)(x).size()
-#define X first
-#define Y second
-
 const int N = 1000 * 100 + 5;
 vector <pii> adj[N];
 int ans, mrk[N];
 
-void Prim(int v) {
+void prim(int v) {
 	int w;
 	set <pii> st;
 	st.insert(mp(0, v));

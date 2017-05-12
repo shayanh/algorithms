@@ -1,20 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define pb push_back
-#define mp make_pair
-#define SQR(a) ((a) * (a))
-#define SZ(x) ((int) (x).size())
-#define ALL(x) (x).begin(), (x).end()
-#define CLR(x, a) memset(x, a, sizeof x)
-#define VAL(x) #x << " = " << (x) << "   "
-#define FOREACH(i, x) for(__typeof((x).begin()) i = (x).begin(); i != (x).end(); i ++)
-#define FOR(i, n) for (int i = 0; i < (n); i ++)
-#define X first
-#define Y second
-
-const int MAXN = 10 * 1000 + 10, MAX = 26, INF = 1e9 + 10;
-
 struct Node {
 	char x;
 	vector<Node*> adj;
@@ -56,8 +39,4 @@ struct Trie {
 		}
 	}
 };
-
-int main () {
-	return 0;
-}
 
