@@ -6,12 +6,21 @@
 	filecolor=magenta,      
 	urlcolor=cyan,
 }
-\usepackage[utf8]{inputenc}
+
+\usepackage{fancyhdr}
+
+
+%\usepackage[utf8]{inputenc}
 %\usepackage{pdflscape}
-\usepackage[top=0.5cm, bottom=0.5cm, right=0.5cm, left=0.5cm]{geometry}
+\usepackage[top=3cm, bottom=0.5cm, right=0.5cm, left=0.5cm]{geometry}
 
 \usepackage{multicol}
 \setlength{\columnsep}{1cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead[R]{Page \thepage}
+\lhead[R]{University of Tehran}
  
 \usepackage{listings}
 
@@ -21,8 +30,6 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
-\usepackage[T1]{fontenc}
-\usepackage{inconsolata}
  
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
@@ -42,17 +49,20 @@
     showtabs=false,                  
     tabsize=2
 }
- 
+
 \lstset{style=mystyle}
- 
+
 \begin{document}
+
 \tableofcontents
+
 \pagebreak
+
 \begin{multicols}{2}
 
 \section{Base}
 \subsection{vimrc}
-	\lstinputlisting[language=C++]{vimrc}
+	\lstinputlisting{vimrc}
 \subsection{Template}
 	\lstinputlisting[language=C++]{template.cpp}
 
@@ -121,6 +131,8 @@
 	\lstinputlisting[language=C++]{euclid.cpp}
 \subsection{C(n, r)}
 	\lstinputlisting[language=C++]{comb.cpp}
+\subsection{FFT}
+	\lstinputlisting[language=C++]{fft.cpp}
 
 \section{Other}
 \subsection{Read Input}
