@@ -14,12 +14,6 @@
 //           A^{-1} = an nxn matrix (stored in a[][])
 //           returns determinant of a[][]
 
-#include <iostream>
-#include <vector>
-#include <cmath>
-
-using namespace std;
-
 const double EPS = 1e-10;
 
 typedef vector<int> VI;
@@ -76,31 +70,5 @@ int main() {
     a[i] = VT(A[i], A[i] + n);
     b[i] = VT(B[i], B[i] + m);
   }
-
   double det = GaussJordan(a, b);
-
-  // expected: 60
-  cout << "Determinant: " << det << endl;
-
-  // expected: -0.233333 0.166667 0.133333 0.0666667
-  //           0.166667 0.166667 0.333333 -0.333333
-  //           0.233333 0.833333 -0.133333 -0.0666667
-  //           0.05 -0.75 -0.1 0.2
-  cout << "Inverse: " << endl;
-  for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++)
-      cout << a[i][j] << ' ';
-    cout << endl;
-  }
-
-  // expected: 1.63333 1.3
-  //           -0.166667 0.5
-  //           2.36667 1.7
-  //           -1.85 -1.35
-  cout << "Solution: " << endl;
-  for (int i = 0; i < n; i++) {
-    for (int j = 0; j < m; j++)
-      cout << b[i][j] << ' ';
-    cout << endl;
-  }
 }
