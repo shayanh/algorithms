@@ -2,6 +2,7 @@ bool mark[MAXN];
 vector<int> dv[MAXN];
 int n, m;
 
+// counts positive integers up to n that are relatively prime to x
 int f(int x) {
 	int res = 0;
 	for (int mask = 0; mask < (1 << SZ(dv[x])); mask ++) {
