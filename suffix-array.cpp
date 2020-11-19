@@ -9,7 +9,7 @@ namespace Suffix{
 		return (x < S && y < S)? rank[x] < rank[y]: x > y;
 	}
 	void Sa_build(const string &s) {
-		S = Size(s);
+		S = s.size();
 		int tmp[N] = {0};
 		for(int i = 0;i < S;++i)
 			rank[i] = s[i],
