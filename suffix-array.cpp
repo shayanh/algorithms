@@ -1,4 +1,4 @@
-const int N = 1000 * 100 + 5;
+const int N = 1000 * 100 + 5; //max string length
 
 namespace Suffix{
 	int sa[N], rank[N], lcp[N], gap, S;
